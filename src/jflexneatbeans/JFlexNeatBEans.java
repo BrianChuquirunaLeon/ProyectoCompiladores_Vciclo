@@ -26,11 +26,11 @@ public class JFlexNeatBEans {
     public static void main(String[] args) {
 //        String path = "C:/Users/BRIAN/Documents/progra_competitiva/automatas/JFlexNeatBEans/src/jflexneatbeans/Lexer.flex";
 //        generarLexer(path);        
-        try{
-            probarLexerFile();
-        }catch(Exception e){
-            
-        }
+//        try{
+//            probarLexerFile();
+//        }catch(Exception e){
+//            
+//        }
         
     }
     public static void generarLexer(String path){
@@ -38,12 +38,14 @@ public class JFlexNeatBEans {
         jflex.Main.generate(file);
     }
     
-    public static void probarLexerFile() throws IOException{
+    public static String probarLexerFile(String texto) throws IOException{
+        String retornar=null;
+        
         File fichero=new File("fichero.txt");
         PrintWriter writer;
-        Scanner read = new Scanner(System.in);
-        String texto = read.nextLine();
-        
+       //Scanner read = new Scanner(System.in);
+       //String texto = read.nextLine();
+       
         try{
             writer = new PrintWriter(fichero);
             
@@ -60,11 +62,14 @@ public class JFlexNeatBEans {
            Token token = lexer.yylex();
            if(token==null){
                System.out.println("EOF");
-               return;
+               retornar = "TOKEN: "+token+"\n"+retornar;
+               return retornar;
+               
            }
            
-            System.out.println("TOKEN: "+token);
-           
+           System.out.println("TOKEN: "+token);
+           retornar = "TOKEN: "+token+"\n"+retornar;
+           System.out.println("retonar : "+retornar);
        }
         
     }
