@@ -43,7 +43,7 @@ public class Ventana extends javax.swing.JFrame {
         txtEntrada.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
 
         btnAnalizar.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        btnAnalizar.setText("Verificar");
+        btnAnalizar.setText("VERIFICAR");
         btnAnalizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAnalizarActionPerformed(evt);
@@ -66,7 +66,7 @@ public class Ventana extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(txtEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(67, 67, 67)
-                        .addComponent(btnAnalizar, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnAnalizar)))
                 .addContainerGap(50, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
